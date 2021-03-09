@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8888/sigert/public';
+	public $baseURL = 'https://www.emplaner-2021.de/sigert/public';
 
 	/*
 	|--------------------------------------------------------------------------

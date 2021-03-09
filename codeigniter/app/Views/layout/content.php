@@ -6,13 +6,16 @@
                 <div class="inside">
                     <!-- BARRA LATERAL  -->
                     <div class="mod_logo">
-                        <a href="http://sigert.de/"></a>
+                        <a target="_blank" href="https://sigert.de/"></a>
                         <span class="claim">Druck- &amp; Medienhaus</span>
                     </div>
                     <div class="layout-corner"></div>
                     <!-- BARRA LATERAL -->
                     <div class="contentSigert header">
-                        <h2 id="headerWriter"></h2>
+                        <!-- <h2 id="headerWriter"></h2> -->
+                        <h2 id="headerWriter" class="typewrite" data-period="2000" data-type='[ "Wandplaner", "Tischplaner", "Pocketplaner"]'>
+                                <span class="wrap"></span>
+                        </h2>
                     </div>
                 </div>
                 <div class="border"></div>
@@ -26,29 +29,28 @@
                 <div class="box"></div>
                 <div class="triangle"></div>
                 <div class="inside">
-                    <div class="fusballDiv"><img src="<?=base_url('images/fussball.png')?>" class="fussball" alt=""></div>
+                    <div class="fusballDiv"><img src="<?=base_url('images/layout/Sigert_Logo_EM_Planer_2021.png')?>" class="fussball" alt=""></div>
                     <div class="contentSigert scroll">
-                    <h2 class="mt-4 pt-60 h2Header">Der Premium</h2>
+                    <h2 class="mt-4 h2Header">Der Premium</h2>
                         <h3 class="h3Header">WERBEARTIKEL</h3>
                             <p>
-                                Mit unseren Top-Werbeartikeln „Made in Germany” ge-ben Sie Ihren Kunden und Geschäftspartnern die
-                                Mögli-chkeit, das Fußball-Highlight des Jahres zu Hause oder im Büro zu planen und zu erleben. Mit Ihrem
-                                Logo oder Werbebotschaft um nachhaltig in Errinnerung zu bleiben. Natzürlich können wir die
-                                EM-Spielpläne auch komplett in Ihrem Design drucken.
+                                Mit unseren Top-Werbeartikeln „Made in Germany” geben Sie Ihren Kunden und Geschäftspartnern die
+                                Möglichkeit, das Fußball-Highlight des Jahres zu Hause oder im Büro zu planen und zu erleben. Mit <b>Ihrem
+                                Logo</b> oder Werbebotschaft um nachhaltig in Errinnerung zu bleiben. Natürlich können wir die
+                                EM-Spielpläne auch komplett in <b>Ihrem Design</b> drucken.
                             </p>
                             <div class="btn-container">  
                                 <span class="ecke-L"></span>
                                 <button class="btn-sigert">
                                     Zur Anfrage
                                 </button> 
-                                <span class="ecke-R eckeRHeader"></span>
                             </div> 
                     </div>
                 </div>
                 <div class="footerContent">
                     <div class="footerBox individuell col col-xs-12">
                         <img src="<?=base_url('images/layout/EM_2021_200x200_Icons_A.png')?>" alt="">
-                        <h4><b>Individuell</b><br>gestalbar</h4>
+                        <h4><b>Individuell</b><br>gestaltbar</h4>
                     </div>
                     <div class="footerBox nachhaltig separateLine col col-xs-12">
                         <img src="<?=base_url('images/layout/EM_2021_200x200_Icons_B.png')?>" alt="">
@@ -70,8 +72,8 @@
                 <div class="box"></div>
                 <div class="triangle"></div>
                 <div class="inside">
-                    <div class="col-L">
-                    	<img src="<?=base_url('images/gallery/EM_Wandplaner_2021_2000x2000_A.jpg')?>" alt="Wandplaner">
+                    <div class="col-L noPadding handyOFF original">
+                    	<img src="<?=base_url('images/gallery/EM_Wandplaner_2021.jpg')?>" alt="Wandplaner">
                     </div>
                     <div class="col-R p-30 pr-120 pt-60 bg-grun scroll">
                     	<h2>WANDPLANER</h2>
@@ -79,7 +81,7 @@
 						<br>
 
                         <p>
-                            Mit selbsthaftenden Ländersticker, die immer wieder abgelöst
+                            Selbsthaftende Ländersticker, die immer wieder abgelöst
 							und neu angeheftet werden können, sind inklusive. Perfekt zum
 							Planen Ihrer EM!<br><br>
 							<b>Logoeindruck:</b> Ihr individueller farbiger Eindruck ist inklusive.<br>
@@ -96,6 +98,9 @@
                             </button> 
                         </div> 
                 	</div>
+                    <div class="col-L noPadding handyON">
+                    	<img src="<?=base_url('images/gallery/EM_Wandplaner_2021.jpg')?>" alt="Wandplaner">
+                    </div>
 				</div>
                    
                 <div class="border"></div>
@@ -124,15 +129,14 @@
                         </p>
 						<br>
                         <div class="btn-container">  
-							<span class="ecke-L"></span>
+                            <span class="ecke-L"></span>
                             <button class="btn-sigert">
                                 Zur Anfrage
                             </button> 
-                            <span class="ecke-R"></span>
                         </div> 
                     </div>
-                    <div class="col-R">
-                        <img src="<?=base_url('images/gallery/EM_Tischplaner_2021_2000x2000_A.jpg')?>" alt="TISCHPLANER">
+                    <div class="col-R noPadding">
+                        <img src="<?=base_url('images/gallery/EM_Tischplaner_2021.jpg')?>" alt="TISCHPLANER">
 						
 						<!-- <div class="fotorama"data-nav="thumbs">
 					  		<img src="<?=base_url('images/gallery/EM_Tischplaner_2021_2000x2000_A.jpg')?>" alt="">
@@ -153,11 +157,11 @@
                 <div class="box"></div>
                 <div class="triangle"></div>
                 <div class="inside">
-                    <div class="col-L">
-                    <img src="<?=base_url('images/gallery/EM_Pocketplaner_2021_2000x2000_A.jpg')?>" alt="Pocketplaner">
+                    <div class="col-L noPadding handyOFF original">
+                        <img src="<?=base_url('images/gallery/EM_Pocketplaner_2021.jpg')?>" alt="Pocketplaner">
                     </div>
                     <div class="col-R p-30 pr-120 pt-60 bg-grun scroll">
-                    <h2>POCKETPLANER</h2>
+                        <h2>POCKETPLANER</h2>
                         <h3>Immer griffbereit</h3>
 							<br>
                         <p>
@@ -181,6 +185,9 @@
                             </button> 
                     	</div>
                 	</div>
+                    <div class="col-L noPadding handyON">
+                        <img src="<?=base_url('images/gallery/EM_Pocketplaner_2021.jpg')?>" alt="Pocketplaner">
+                    </div>
 				</div>
                 <div class="border"></div>
             </div>
@@ -200,10 +207,16 @@
                     <?php echo view('layout/form'); ?>
 
                 </div>
-                <div class="border"></div>
+                
+                <div class="datenschutz">
+                    <a target="_blank" href="https://www.sigert.de/datenschutzerklaerung.html">Datenschutzerklärung</a>
+                    <a target="_blank" href="https://www.sigert.de/impressum.html">Impressum</a>
+                    <a target="_blank" href="https://www.sigert.de/kontakt.html">Kontakt</a>
+                </div>
             </div>
         </section>
         <div class="layout-line right d-none d-sm-block"></div>
+
     </div> 
 
 <!-- MODAL -->

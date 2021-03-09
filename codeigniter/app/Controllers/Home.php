@@ -12,6 +12,12 @@ class Home extends BaseController
 
 	public function index()
 	{
+
+		// if ($test != "test") {
+		// 	print_r('Willkommen!');
+		// 	exit();
+		// }
+
 		$request = \Config\Services::request();
 
 
@@ -42,7 +48,7 @@ class Home extends BaseController
 						break;
 				case 'true':
 						// Alles gut
-						$aData['formSended'] 				= 'Vielen Dank!';
+						$aData['formSended'] 				= 'Vielen Dank für Ihre Anfrage. <br> <small>Wir senden Ihnen eine Bestätigung an ihre E-Mail-Adresse.</small>';
 						$aData['formSendedValue'] 			= 'images/layout/check.png';
 						
 						break;
@@ -64,14 +70,13 @@ class Home extends BaseController
 			
 			'name' 			=> 'required|min_length[3]',
 			'firma' 		=> 'required|min_length[3]',
+			'anzahl' 		=> 'required',
 			'strasse' 		=> 'required|min_length[3]',
 			'plz' 			=> 'required|min_length[3]',
 			'telefon' 		=> 'required|numeric|max_length[20]',
 			'email' 		=> 'required|valid_email',
 			'selectOne' 	=> 'required|min_length[3]',
-			'selectTwo' 	=> 'required|min_length[3]',
 			'check1' 		=> 'trim|required|greater_than[0]',
-			'check2' 		=> 'trim|required|greater_than[0]',
 		]);
 
 		if ($this->request->getMethod() == "post") { 
@@ -87,17 +92,34 @@ class Home extends BaseController
             $mForm->save([
                 'name' 			=> $request->getPost('name'),
                 'firma'  		=> $request->getPost('firma'),
+                'anzahl'  		=> $request->getPost('anzahl'),
 				'strasse'  		=> $request->getPost('strasse'),
 				'plz'  			=> $request->getPost('plz'),
 				'telefon'  		=> $request->getPost('telefon'),
 				'email'  		=> $request->getPost('email'),
 				'nachricht' 	=> $request->getPost('nachricht'),
 				'check1'  		=> $request->getPost('check1'),
-				'check2	'  		=> $request->getPost('check2'),
 				'selectOne'  	=> $request->getPost('selectOne'),
-				'selectTwo'  	=> $request->getPost('selectTwo'),
-			]);  
+			]); 
+			
+			$emailArray = array(
+				'id'			=> $mForm->insertID().'2021',
+				'name' 			=> $request->getPost('name'),
+				'firma'  		=> $request->getPost('firma'),
+				'anzahl'  		=> $request->getPost('anzahl'),
+				'strasse'  		=> $request->getPost('strasse'),
+				'plz'  			=> $request->getPost('plz'),
+				'telefon'  		=> $request->getPost('telefon'),
+				'email'  		=> $request->getPost('email'),
+				'nachricht' 	=> $request->getPost('nachricht'),
+				'check1'  		=> $request->getPost('check1'),
+				'selectOne'  	=> $request->getPost('selectOne'),
+			);
+
+	
 			$this->session->set('formSended', 'true');
+			$this->sendEmail($request->getPost('email'),$emailArray);
+
 		}   
 		
 		}	
@@ -134,4 +156,22 @@ class Home extends BaseController
 		return view('layout/header', $aData).view('layout/content',$aData).view('layout/footer');
 	}
 
+	public function sendEmail($to, $emailArray){
+
+		$message = view('layout/email', $emailArray);
+
+		$email = \Config\Services::email();
+
+		$email->setFrom('info@sigert.de', 'Sigert');
+		$email->setTo($to);
+		$email->setBCC('info@sigert.de');
+		// $email->setBCC('them@their-example.com');
+
+		$email->setSubject('Anfrage EM Spielpläne - Sigert Nr° ' .$emailArray['id']);
+		// $email->setMessage($message);
+		$email->setMessage($message);
+
+		$email->send();
+
+	}
 }

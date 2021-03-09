@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .img-txt-container {
     background-color: #e6f5fc;
 }
@@ -6,9 +13,28 @@
     background-color: #e6ffe6;
 }
 
+.handyOFF, .handyON{
+    display: none;
+}
+
+.handyOFF.original{
+    display: block;
+}
+
 
 .content{
     padding: 30px;
+}
+
+.datenschutz{
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+}
+
+.datenschutz a{
+    color:#fff!important;
+    margin-left: 10px;
 }
 
 p{
@@ -20,13 +46,21 @@ p{
 h2{
     text-align: left;
     color: #002D62!important;
-    font-family: 'PT Sans', sans-serif;
     font-weight: bold;
+    font-family: 'PT Sans Narrow', sans-serif!important;
+    letter-spacing: 5px;
+
+    z-index: 999999999;
 	/* letter-spacing: 0.1em; */
     /* font-style: sans ; */
 }
 
+span.wrap{
+    color: #002D62!important;
+}
+
 h3{
+    z-index:999999999;
     text-align: left;
     color: #009EE2!important;
     font-style: italic!important;
@@ -39,21 +73,33 @@ h2.h2Header{
 	font-family: 'PT Serif', serif!important;
     font-weight: 100;
     letter-spacing: 0em;
+    padding-top: 40px ;
 }
 
 h3.h3Header{
-	font-family: 'PT Sans', sans-serif!important;
+    font-family: 'PT Sans Narrow', sans-serif!important;
 	text-align: left;
     color: #002D62!important;
-    font-family: 'PT Serif kursiv', sans-serif;
     font-weight: bold;
-    font-size: 3.5em!important;
+    font-size: 4em!important;
     font-style: normal!important;
+    letter-spacing: 7px!important;
 }
 
 h2.titleKontakt{
 	font-size: 3vw!important;
-	margin-left: 34.33%;
+    /* margin-left: 34.33%; */
+    letter-spacing: 1px;
+    margin-left: 45px;
+}
+
+#headerWriter{
+    z-index: 99999999!important;
+}
+
+h2.typewrite{
+    font-family: 'PT Serif',serif!important;
+    font-style: italic!important;
 }
 
 .c-green{
@@ -124,13 +170,17 @@ h2.titleKontakt{
 }
 
 .mod_article.section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     /* min-height: calc(100vh - 30px); */
     min-height: 100vh;
     background-size: cover;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .mod_article .contentSigert {
@@ -148,7 +198,7 @@ h2.titleKontakt{
 } */
 
 .fp-tableCell {
-    display: table-cell;
+    /* display: table-cell; */
     vertical-align: middle;
     width: 100%;
     height: 100%;
@@ -199,8 +249,11 @@ h2.titleKontakt{
     width: 50%;
 }
 
+
+
 .p-30 {
     padding: 30px;
+    margin-bottom: 20px;
 }
 
 .pr-120{
@@ -211,9 +264,13 @@ h2.titleKontakt{
 
 .contentSigert.header{
     vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 100vh;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-style: italic;
     padding-left: 20px;
 }
@@ -222,6 +279,8 @@ h2.titleKontakt{
 
 .mod_article#home-header{
     background-image: url('../images/layout/Header_EM_Planer_2021.jpg');
+    background-position-y: -70px;
+    background-repeat: no-repeat;
 }
 
 .mod_article#home-intro-neu2 .triangle {
@@ -235,7 +294,8 @@ h2.titleKontakt{
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+      transform: scaleX(-1);
 }
 
 
@@ -264,6 +324,8 @@ h2.titleKontakt{
 }
 
 .footerContent{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 20px;
     padding-bottom: 20px;
@@ -273,7 +335,9 @@ h2.titleKontakt{
 .footerBox{
     margin: auto;
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     vertical-align: middle;
     font-size: 2em;
 }
@@ -294,8 +358,16 @@ h2.titleKontakt{
 
 
 .btn-container{
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
     display: flex!important;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.submitDiv{
+    margin-top: 40px!important ;
 }
 
 .btn-sigert {
@@ -311,6 +383,8 @@ h2.titleKontakt{
     width: 50%;
     height: 120px;
     font-size: 45px;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
     z-index: 3;
 }
@@ -326,7 +400,8 @@ button.active.focus, button.active:focus,
 button.focus, button:active.focus, 
 button:active:focus, button:focus {
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .ecke-L{
@@ -352,8 +427,12 @@ button:active:focus, button:focus {
     margin-left: -3px;
     background-image: url(../images/background/triangle-dark-blue-ecke.svg);
     background-repeat: no-repeat;
-    transform: scaleX(-1);
-	transform: rotate(180deg);
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1);
+	-webkit-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	        transform: rotate(180deg);
     background: ('../images/background/triangle-dark-green.svg');
     height: 120px;
     background-size: contain;
@@ -384,8 +463,12 @@ width: 51px;
 margin-left: -3px;
 background-image: url(../images/background/triangle-dark-green-ecke.svg);
 background-repeat: no-repeat;
-transform: scaleX(-1);
-transform: rotate(180deg);
+-webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+-webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
 background: ('../images/background/triangle-dark-green.svg');
 height: 120px;
 background-size: contain;
@@ -398,6 +481,8 @@ z-index: 2;
 /* SECTION 3 */
 
 .mod_article#home-wandplaner .inside , .mod_article#home-pocketplaner .inside {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
 }
@@ -407,7 +492,7 @@ z-index: 2;
 }
 
 .mod_article#home-wandplaner .inside .col-L {
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 .mod_article#home-pocketplaner .inside .col-L{
@@ -417,6 +502,8 @@ z-index: 2;
 /* SECTION 4 */
 
 .mod_article#home-tischplaner .inside {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
 }
@@ -426,7 +513,7 @@ z-index: 2;
 }
 
 .mod_article#home-tischplaner .inside .col-R{
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 /* SECTION 5 Formular */
@@ -436,9 +523,13 @@ z-index: 2;
     background-color: #ffdada;
 }
 
+.errorText{color: #ff0000;}
+
 
 
 .mod_article#home-formular {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
     background-color: #0F2D5F;
@@ -447,6 +538,8 @@ z-index: 2;
 }
 
 .mod_article#home-formular .inside {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 35px 35px 0 35px;
     
@@ -457,7 +550,7 @@ z-index: 2;
 }
 
 .mod_article#home-formular .inside .col-R{
-    background-color: #ccc;
+    background-color: #fff;
 
 }
 
@@ -494,10 +587,8 @@ form.formSigert {
 input[type=checkbox]
 {
   /* Double-sized Checkboxes */
-  -ms-transform: scale(2); /* IE */
-  -moz-transform: scale(2); /* FF */
-  -webkit-transform: scale(2); /* Safari and Chrome */
-  -o-transform: scale(2); /* Opera */
+  -ms-transform: scale(2); /* IE */ /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */ /* Opera */
   transform: scale(2);
   padding: 10px;
 
@@ -547,6 +638,14 @@ input[type=checkbox]
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
+  and (-webkit-min-device-pixel-ratio: 2), screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (-o-min-device-pixel-ratio: 2/1), screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
 }
 
@@ -556,7 +655,7 @@ input[type=checkbox]
 @media (min-width: 600px){
 
 	.pt-60 {
-		padding-top: 60px;
+		padding-top: 80px;
 	}
 	
 	.footerBox h4{
@@ -575,7 +674,7 @@ input[type=checkbox]
     padding: 15px 25px;
     font-size: 2.5em;
     border: navajowhite;
-    width: 80%;
+    width: 70%;
     height: 120px;
     margin-bottom: 50px;
     background-color: #75FB4C!important;
@@ -601,4 +700,14 @@ input[type=checkbox]
 
 .alertModal {
     max-width: 200px;
+  }
+
+
+  [data-typeit-id]:before{
+      display: none!important;
+  }
+
+
+  .col-lg-4 {
+      padding: 0 30px;
   }
